@@ -44,7 +44,7 @@ uniqid2evar = { vv.uniqid: vv for vv in evars }
 # scenarios
 # ---
 
-scen = 3
+scen = 0
 
 if scen == 0:
 
@@ -276,7 +276,7 @@ for gen in range(gen_max): # one step of the game
 
                         for prule in oth_ind['prules']:
 
-                            if And(prule, ~beh).to_dnf() == expr(False):
+                            if And(foc_ind['beh'], Not(prule)).to_dnf() == expr(False): 
 
                                 voteFor = False
                                 break
@@ -321,7 +321,7 @@ for gen in range(gen_max): # one step of the game
 
                     oth_ind = grp[oth_idx]
 
-                    # if other is a non-punisher
+                    # if other is a non-punisher TODO remove this, as we might like different later
                     if And(oth_ind['beh'], p) == expr(False): 
 
                         pun_pts = 0
