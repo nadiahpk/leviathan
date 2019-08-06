@@ -7,8 +7,12 @@ this code is about allowing every possible strategy to evolve in a public goods 
 where strategies involve both a decision about cooperating/defecting in the PGG,
 and also who to vote for in a pool of punishers based upon their punishment criteria.
 
+Strategies and punishment rules are encoded as Boolean expressions,
+which means that I can automatically enumerate the strategies and punishment rules and determine who gets punished and by how many points.
+
 A recent paper -- Garcia and Traulsen (2019; J. R. Soc. Interface) -- contains some similar ideas to
 what I was aiming for.
+
 
 ## License
 
